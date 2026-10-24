@@ -1,4 +1,4 @@
-name: E2E OpenCart (Serenity BDD)
+name: Serenity Tests with GitHub Pages
 
 on:
   push:
@@ -6,26 +6,44 @@ on:
   pull_request:
   workflow_dispatch:
 
-jobs:
-  e2e:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
+permissions:
+  contents: write
 
-      - uses: actions/setup-java@v4
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
         with:
-          distribution: temurin
           java-version: '17'
+          distribution: 'temurin'
+          cache: 'gradle'
 
       - name: Dar permisos al wrapper
         run: chmod +x gradlew
 
-      - name: Ejecutar pruebas (Chrome headless)
-        run: ./gradlew clean test -Dheadless.mode=true
+      - name: Ejecutar pruebas y generar reporte Serenity
+        run: ./gradlew clean test aggregate -Dheadless.mode=true
 
-      - name: Publicar reporte de Serenity
+      - name: Guardar reporte como artefacto
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: serenity-report
           path: target/site/serenity
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: Publicar reporte en GitHub Pages
+        if: always() && github.event_name == 'push'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./target/site/serenity
+          destination_dir: reports/${{ github.run_number }}
+          keep_files: true
