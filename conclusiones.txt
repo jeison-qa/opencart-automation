@@ -1,0 +1,90 @@
+=====================================================================
+CONCLUSIONES Y HALLAZGOS - EJERCICIO 1 (E2E OpenCart, Guest Checkout)
+Proyecto: opencart-automation
+Sitio bajo prueba: http://opencart.abstracta.us/
+=====================================================================
+ 
+1. ALCANCE CUBIERTO
+-------------------
+Se automatizo un escenario E2E (features/compra_completa.feature) que cubre
+el flujo pedido en el ejercicio:
+  - Agregar dos productos al carrito (MacBook e iPhone).
+  - Visualizar el carrito desde el menu desplegable de la cabecera
+    (boton del carrito > View Cart).
+  - Completar el checkout como invitado (Guest Checkout) con datos de
+    facturacion de prueba.
+  - Continuar con el metodo de envio por defecto, aceptar terminos y
+    condiciones, continuar con el metodo de pago y confirmar el pedido.
+  - Validar el mensaje final "Your order has been placed!".
+ 
+2. DECISIONES DE DISENO
+-----------------------
+- Serenity BDD con patron Screenplay y Cucumber: el escenario esta escrito
+  en Gherkin, es legible para negocio y el reporte de Serenity muestra
+  cada paso con su captura de pantalla.
+- Estructura por responsabilidades (ui, tasks, questions, stepdefinitions):
+  si cambia un localizador solo se modifica una clase.
+- Productos: MacBook e iPhone, porque se agregan directo desde la home sin
+  opciones obligatorias. Otros productos (por ejemplo Apple Cinema 30" o
+  Canon EOS 5D) pueden exigir elegir una opcion antes de agregarse.
+- Datos de prueba en el .feature (Scenario Outline con Examples), no en el
+  codigo; para otra compra basta agregar una fila.
+- Esperas explicitas en lugar de pausas fijas: despues de cada "Add to Cart"
+  se espera la alerta de OpenCart con el nombre del producto, y al final se
+  espera el mensaje de confirmacion, porque el sitio actualiza esas partes
+  por AJAX. La espera por elemento se configuro en 15 segundos.
+- Localizadores: se priorizaron id y CSS. Para el boton "Add to Cart" se uso
+  XPath por nombre de producto y por el icono del carrito dentro de la
+  tarjeta del producto, porque los cuatro botones de la home no tienen
+  identificador propio; asi no depende del atributo onclick ni del idioma.
+- Validacion: la unica asercion es el mensaje final de confirmacion, que es
+  lo que pide el ejercicio; los pasos anteriores fallan por si solos si el
+  flujo no avanza.
+ 
+3. RESULTADO DE LA EJECUCION
+----------------------------
+  Fecha de ejecucion .............: 24/10/2026
+  Navegador / version ............: Google Chrome 155.0.8059.84
+  Sistema operativo ..............: Windows 11 (amd64)
+  Java / Gradle ..................: Java 17.0.18 / Gradle 9.3.1
+  Selenium / Serenity BDD ........: 4.23.1 / 4.2.1
+  Resultado del escenario ........: [X] PASSED   [ ] FAILED
+  Tiempo total ...................: 55 s
+  Reporte: evidencias/reporte-serenity/index.html
+ 
+4. INCIDENCIAS DURANTE LA EJECUCION
+-----------------------------------
+  En la ejecucion final documentada no se presentaron incidencias: el
+  escenario recorrio el flujo completo, desde la tienda hasta el mensaje
+  "Your order has been placed!", sin errores.
+ 
+5. LIMITACIONES Y RIESGOS
+-------------------------
+- Depende de un sitio publico externo: caidas, lentitud o cambios en el HTML
+  pueden causar fallos que no son defectos del flujo.
+- Cada ejecucion crea un pedido en el demo con datos ficticios.
+- Solo se cubre el camino feliz con un metodo de envio y de pago por defecto.
+- El localizador de productos funciona solo con los productos destacados de
+  la home.
+- No se automatizo la compra de camaras ni de monitores, porque la
+  funcionalidad para agregarlos al carrito se observo inestable en el sitio:
+  en el caso de la camara, aun llenando todos los datos requeridos, el boton
+  de anadir al carrito genera la interaccion de forma intermitente, es
+  decir, se queda cargando el boton y no ejecuta la accion sino despues de
+  varios intentos; en el caso de los monitores, al anadir el producto este
+  no se carga al carrito. Por eso el escenario usa MacBook e iPhone.
+- La region elegida se selecciona por su texto exacto; si el catalogo de
+  regiones cambia (por ejemplo, con o sin tilde), el paso fallara.
+ 
+6. MEJORAS PROPUESTAS
+---------------------
+- Agregar escenarios negativos: campos obligatorios vacios, correo invalido,
+  carrito vacio y terminos y condiciones sin aceptar.
+- Parametrizar mas productos y datos de facturacion con nuevas filas en
+  Examples.
+- Validar totales (subtotal + envio = total) en el carrito y en la
+  confirmacion.
+- Ejecutar en varios navegadores y de forma programada en CI (workflow
+  incluido en .github/workflows/e2e.yml), publicando el reporte.
+- Reintentos controlados ante lentitud del entorno.
+ 
