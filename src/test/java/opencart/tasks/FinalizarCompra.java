@@ -11,25 +11,26 @@ import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisi
 public class FinalizarCompra {
 
     public static Performable continuandoConElEnvioPorDefecto() {
-        return Task.where("Continua con el metodo de envio por defecto",
-
+        return Task.where(
+                "Continua con el metodo de envio por defecto",
                 WaitUntil.the(CheckoutPage.BOTON_CONTINUAR_ENVIO,isVisible()).forNoMoreThan(10).seconds(),
-
                 Click.on(CheckoutPage.BOTON_CONTINUAR_ENVIO)
         );
     }
 
     public static Performable aceptandoTerminosYContinuandoConElPago() {
-        return Task.where("Acepta los terminos y condiciones y continua con el metodo de pago",
+        return Task.where(
+                "Acepta los terminos y condiciones y continua con el metodo de pago",
+                WaitUntil.the(CheckoutPage.CHECK_TERMINOS,isVisible()).forNoMoreThan(10).seconds(),
                 Click.on(CheckoutPage.CHECK_TERMINOS),
-                Click.on(CheckoutPage.BOTON_CONTINUAR_PAGO));
+                WaitUntil.the(CheckoutPage.BOTON_CONTINUAR_PAGO,isVisible()).forNoMoreThan(10).seconds(),
+                Click.on(CheckoutPage.BOTON_CONTINUAR_PAGO)
+        );
     }
 
     public static Performable confirmandoElPedido() {
-        return Task.where("Confirma el pedido",
-                Click.on(CheckoutPage.BOTON_CONFIRMAR_PEDIDO));
-    }
-
-    private FinalizarCompra() {
+        return Task.where("Confirma el pedido", WaitUntil.the(CheckoutPage.BOTON_CONFIRMAR_PEDIDO, isVisible()).forNoMoreThan(15).seconds(),
+                Click.on(CheckoutPage.BOTON_CONFIRMAR_PEDIDO)
+        );
     }
 }
