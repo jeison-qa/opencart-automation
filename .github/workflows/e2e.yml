@@ -39,7 +39,15 @@ jobs:
           if-no-files-found: warn
           retention-days: 30
 
-      - name: Publicar reporte en GitHub Pages
+      - name: Publicar reporte Serenity en la página principal
+        if: always() && github.event_name == 'push'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./target/site/serenity
+          keep_files: true
+
+      - name: Guardar también el reporte por número de ejecución
         if: always() && github.event_name == 'push'
         uses: peaceiris/actions-gh-pages@v3
         with:
