@@ -226,7 +226,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 24-10-2026 19:11:10</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 24-10-2026 19:18:49</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -241,7 +241,7 @@
                         <td width="375px" valign="top">
                             <div class="test-count-summary">
                                 <div class="test-count-title">
-                                    8 tests
+                                    1 test
 
                                      |
                                         <a href="46b54d9084ba9783130da16408afb27a4e4620f6bd966e731510c7395b9ddf5c.csv" title="Download CSV"> <i class="bi bi-cloud-arrow-down"
@@ -320,54 +320,54 @@
                     <td>
                         <i class="bi bi-caret-right"></i> Total Number of Test Cases
                     </td>
-                    <td>8</td>
+                    <td>1</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-flag-fill"></i> Tests Started
                     </td>
-                    <td>Oct 24, 2026 19:10:37</td>
+                    <td>Oct 24, 2026 19:18:30</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-stop-circle"></i> Tests
                         Finished
                     </td>
-                    <td>Oct 24, 2026 19:11:07</td>
+                    <td>Oct 24, 2026 19:18:47</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-stopwatch"></i> Total
                         Duration
                     </td>
-                    <td>29s</td>
+                    <td>16s</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-trophy"></i> Fastest Test
                     </td>
-                    <td>0ms</td>
+                    <td>16s</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-skip-start"></i> Slowest
                         Test
                     </td>
-                    <td>29s</td>
+                    <td>16s</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-stopwatch"></i> Average
                         Execution Time
                     </td>
-                    <td>3s</td>
+                    <td>16s</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-stopwatch-fill"></i> Total
                         Execution Time
                     </td>
-                    <td>29s</td>
+                    <td>16s</td>
                 </tr>
                 </tbody>
             </table>
@@ -413,35 +413,53 @@ And agrega al carrito el producto "iPhone"
 Agrega el producto iPhone al carrito
 Cliente clicks on boton Add to Cart de iPhone
 And visualiza el carrito de compras
+Visualiza el carrito de compras
+Cliente clicks on boton del carrito en la cabecera
+Cliente clicks on opcion View Cart del menu del carrito
 And inicia el checkout como invitado
+Inicia el checkout como invitado (Guest Checkout)
+Cliente clicks on boton Checkout del carrito
+Cliente clicks on opcion Guest Checkout
+Cliente clicks on boton Continue de Checkout Options
 And completa los datos de facturacion con:
 | nombre | apellido | correo | telefono | direccion | ciudad | codigo_postal | pais | region |
 | Jeison | Monterrosa | prueba.guest@example.com | 3001234567 | 123 Calle Prueba | Cartagena | 130001 | Colombia | Bolivar |
+Completa los datos de facturacion como invitado
+Cliente enters 'Jeison' into campo First Name
+Cliente enters 'Monterrosa' into campo Last Name
+Cliente enters 'prueba.guest@example.com' into campo E-Mail
+Cliente enters '3001234567' into campo Telephone
+Cliente enters '123 Calle Prueba' into campo Address 1
+Cliente enters 'Cartagena' into campo City
+Cliente enters '130001' into campo Post Code
+Cliente selects Colombia on lista Country
+Cliente selects Bolivar on lista Region / State
+Cliente clicks on boton Continue de Billing Details
 And continua con el metodo de envio por defecto
+Continua con el metodo de envio por defecto
+Cliente clicks on boton Continue de Delivery Method
 And acepta los terminos y condiciones y continua con el metodo de pago
+Acepta los terminos y condiciones y continua con el metodo de pago
+Cliente clicks on casilla de terminos y condiciones
+Cliente clicks on boton Continue de Payment Method
 And confirma el pedido
+Confirma el pedido
+Cliente clicks on boton Confirm Order
 Then debe ver el mensaje de confirmacion "Your order has been placed!"
+Then el mensaje de confirmacion del pedido should be 'Your order has been placed!'
 </td>
-                                                                                    <td>8</td>
-                                                                                    <td>0%</td>
+                                                                                    <td>1</td>
+                                                                                    <td>100%</td>
                                                                                     <td>
-                                                                                            <a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
+                                                                                            <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
                                                                                     </td>
                                                                                     <td>
                                                                                         <div class="progress">
                                                                                                 <div class="progress-bar"
                                                                                                      role="progressbar"
-                                                                                                     style="width: 87.5%; background-color: #e3c281"
-                                                                                                     aria-valuenow="7"
-                                                                                                     title="88% skipped"
-                                                                                                     aria-valuemin="0"
-                                                                                                     aria-valuemax="100">
-                                                                                                </div>
-                                                                                                <div class="progress-bar"
-                                                                                                     role="progressbar"
-                                                                                                     style="width: 12.5%; background-color: #fe6c2d"
+                                                                                                     style="width: 100%; background-color: #b0cf73"
                                                                                                      aria-valuenow="1"
-                                                                                                     title="13% error"
+                                                                                                     title="100% success"
                                                                                                      aria-valuemin="0"
                                                                                                      aria-valuemax="100">
                                                                                                 </div>
@@ -453,35 +471,6 @@ Then debe ver el mensaje de confirmacion "Your order has been placed!"
                                                         </div>
                                                     </div>
 
-                                                    <div class="row">
-                                                        <div class="col-lg-6 col-md-6 col-sm-12">
-                                                            <h3>Test Failure Overview</h3>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-lg-6 col-md-6 col-sm-12">
-                                                            <h4>Most Frequent Failures</h4>
-                                                            <table class="table" style="width:40vw;">
-                                                                <tbody>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                        <div class="col-lg-6 col-md-6 col-sm-12">
-                                                            <h4>Most Unstable Features</h4>
-                                                            <table class="table" style="width:40vw;">
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td class="failure-color top-list-title">
-                                                                            <a href="8e69fc2410e054cc44a8f9fac5d41b0c8058f751a0bb4b27da9334a09d178553.html">Flujo de compra completo como invitado en OpenCart</a>
-                                                                        </td>
-                                                                        <td>
-                                                                            <span class="badge failure-badge">12%</span>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                    </div>
                                             </div>
                                             <div class="container-fluid">
         <div class="row">
@@ -491,23 +480,23 @@ Then debe ver el mensaje de confirmacion "Your order has been placed!"
                         <div class="card-body">
                             <div>
                                     <a href="41f5205d6d58c0b87620866aba63cb6e3d1be42b6c5018f18cc7c680fcccb866.html">
-                                    <span class="tag-badge badge" style="background-color:#fe6c2d; margin:1em;padding:4px;">
-                                        <i class="bi bi-tag-fill"></i> E2e&nbsp;&nbsp;&nbsp;8
+                                    <span class="tag-badge badge" style="background-color:#b0cf73; margin:1em;padding:4px;">
+                                        <i class="bi bi-tag-fill"></i> E2e&nbsp;&nbsp;&nbsp;1
                                     </span>
                                     </a>
                                     <a href="b7e33abe7619d82cefda21fe358074425199aafab4998745a7f9803cfbdd6a6a.html">
-                                    <span class="tag-badge badge" style="background-color:#fe6c2d; margin:1em;padding:4px;">
-                                        <i class="bi bi-tag-fill"></i> Compra&nbsp;&nbsp;&nbsp;8
+                                    <span class="tag-badge badge" style="background-color:#b0cf73; margin:1em;padding:4px;">
+                                        <i class="bi bi-tag-fill"></i> Compra&nbsp;&nbsp;&nbsp;1
                                     </span>
                                     </a>
                                     <a href="65a2df077748f74ccd607af4e962738958bdf672b0d6b0150ae42bcfa475044e.html">
-                                    <span class="tag-badge badge" style="background-color:#fe6c2d; margin:1em;padding:4px;">
-                                        <i class="bi bi-tag-fill"></i> Smoke&nbsp;&nbsp;&nbsp;8
+                                    <span class="tag-badge badge" style="background-color:#b0cf73; margin:1em;padding:4px;">
+                                        <i class="bi bi-tag-fill"></i> Smoke&nbsp;&nbsp;&nbsp;1
                                     </span>
                                     </a>
                                     <a href="925210e29882e21bda4e2a3c41221974977e0aee641e926d50df99ddcfcda913.html">
-                                    <span class="tag-badge badge" style="background-color:#fe6c2d; margin:1em;padding:4px;">
-                                        <i class="bi bi-tag-fill"></i> Opencart&nbsp;&nbsp;&nbsp;8
+                                    <span class="tag-badge badge" style="background-color:#b0cf73; margin:1em;padding:4px;">
+                                        <i class="bi bi-tag-fill"></i> Opencart&nbsp;&nbsp;&nbsp;1
                                     </span>
                                     </a>
                             </div>
@@ -518,8 +507,8 @@ Then debe ver el mensaje de confirmacion "Your order has been placed!"
                                 <h5 class="card-title">Context</h5>
                             <div>
                                     <a href="46b54d9084ba9783130da16408afb27a4e4620f6bd966e731510c7395b9ddf5c.html">
-                                    <span class="tag-badge badge" style="background-color:#fe6c2d; margin:1em;padding:4px;">
-                                        <i class="bi bi-tag-fill"></i> Chrome, Linux&nbsp;&nbsp;&nbsp;8
+                                    <span class="tag-badge badge" style="background-color:#b0cf73; margin:1em;padding:4px;">
+                                        <i class="bi bi-tag-fill"></i> Chrome, Linux&nbsp;&nbsp;&nbsp;1
                                     </span>
                                     </a>
                             </div>
@@ -547,17 +536,17 @@ Then debe ver el mensaje de confirmacion "Your order has been placed!"
                         <i class="bi bi-stopwatch"></i> Total
                         Duration
                     </td>
-                    <td>29s</td>
+                    <td>16s</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-caret-right"></i> Total Number of Test Cases
                     </td>
-                    <td>8</td>
+                    <td>1</td>
                     <td>
                         <i class="bi bi-trophy"></i> Fastest Test
                     </td>
-                    <td>0ms</td>
+                    <td>16s</td>
                 </tr>
                 <tr scope="row">
                     <td>
@@ -568,30 +557,30 @@ Then debe ver el mensaje de confirmacion "Your order has been placed!"
                         <i class="bi bi-skip-start"></i> Slowest
                         Test
                     </td>
-                    <td>29s</td>
+                    <td>16s</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-flag-fill"></i> Tests Started
                     </td>
-                    <td>Oct 24, 2026 19:10:37</td>
+                    <td>Oct 24, 2026 19:18:30</td>
                     <td>
                         <i class="bi bi-stopwatch"></i> Average
                         Execution Time
                     </td>
-                    <td>3s</td>
+                    <td>16s</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-stop-circle"></i> Tests
                         Finished
                     </td>
-                    <td>Oct 24, 2026 19:11:07</td>
+                    <td>Oct 24, 2026 19:18:47</td>
                     <td>
                         <i class="bi bi-stopwatch-fill"></i> Total
                         Execution Time
                     </td>
-                    <td>29s</td>
+                    <td>16s</td>
                 </tr>
                 </tbody>
             </table>
@@ -614,7 +603,7 @@ Then debe ver el mensaje de confirmacion "Your order has been placed!"
                                                                 </tr>
                                                                 </thead>
                                                                 <tbody>
-                                                                    <tr class="scenario-result ERROR">
+                                                                    <tr class="scenario-result SUCCESS">
                                                                         <td>
                                                                                 <a href="8e69fc2410e054cc44a8f9fac5d41b0c8058f751a0bb4b27da9334a09d178553.html">Flujo de compra completo como invitado en OpenCart</a>
                                                                         </td>
@@ -623,9 +612,7 @@ Then debe ver el mensaje de confirmacion "Your order has been placed!"
                                                                                title="Data Driven Scenario"> <a
                                                                                         href="ed87bbdcd514e08d2087978527bd43b13102c600064dabcf8ca6d6d6308cbcb9.html">Comprar dos productos como invitado hasta la confirmacion del pedido</a>
                                                                                 <br/>
-                                                                                    <a href='##beforetable'><i class='bi bi-skip-forward skipped-icon ' title='SKIPPED'></i></a> 7 skipped test cases
-                                                                                    <br/>
-                                                                                    <a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a> 1 broken test case
+                                                                                    <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> 1 passing test case
                                                                                     <br/>
                                                                         </td>
                                                                         <td><span class='context-icon'><i class='bi bi-browser-chrome' title='Chrome'></i> <i class='bi bi-ubuntu' title='Linux'></i></span><span style="display:none">Chrome,linux</span>
@@ -648,10 +635,10 @@ And acepta los terminos y condiciones y continua con el metodo de pago
 And confirma el pedido
 Then debe ver el mensaje de confirmacion "Your order has been placed!"
 </td>
-                                                                        <td data-order="1792869037">19:10:37</td>
-                                                                        <td>29s 753ms</td>
-                                                                        <td><a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a> <span
-                                                                                    style="display:none">ERROR</span>
+                                                                        <td data-order="1792869510">19:18:30</td>
+                                                                        <td>16s 258ms</td>
+                                                                        <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
+                                                                                    style="display:none">SUCCESS</span>
                                                                         </td>
                                                                     </tr>
                                                                 </tbody>
@@ -677,23 +664,23 @@ Then debe ver el mensaje de confirmacion "Your order has been placed!"
                         <div class="card-body">
                             <div>
                                     <a href="41f5205d6d58c0b87620866aba63cb6e3d1be42b6c5018f18cc7c680fcccb866.html">
-                                    <span class="tag-badge badge" style="background-color:#fe6c2d; margin:1em;padding:4px;">
-                                        <i class="bi bi-tag-fill"></i> E2e&nbsp;&nbsp;&nbsp;8
+                                    <span class="tag-badge badge" style="background-color:#b0cf73; margin:1em;padding:4px;">
+                                        <i class="bi bi-tag-fill"></i> E2e&nbsp;&nbsp;&nbsp;1
                                     </span>
                                     </a>
                                     <a href="b7e33abe7619d82cefda21fe358074425199aafab4998745a7f9803cfbdd6a6a.html">
-                                    <span class="tag-badge badge" style="background-color:#fe6c2d; margin:1em;padding:4px;">
-                                        <i class="bi bi-tag-fill"></i> Compra&nbsp;&nbsp;&nbsp;8
+                                    <span class="tag-badge badge" style="background-color:#b0cf73; margin:1em;padding:4px;">
+                                        <i class="bi bi-tag-fill"></i> Compra&nbsp;&nbsp;&nbsp;1
                                     </span>
                                     </a>
                                     <a href="65a2df077748f74ccd607af4e962738958bdf672b0d6b0150ae42bcfa475044e.html">
-                                    <span class="tag-badge badge" style="background-color:#fe6c2d; margin:1em;padding:4px;">
-                                        <i class="bi bi-tag-fill"></i> Smoke&nbsp;&nbsp;&nbsp;8
+                                    <span class="tag-badge badge" style="background-color:#b0cf73; margin:1em;padding:4px;">
+                                        <i class="bi bi-tag-fill"></i> Smoke&nbsp;&nbsp;&nbsp;1
                                     </span>
                                     </a>
                                     <a href="925210e29882e21bda4e2a3c41221974977e0aee641e926d50df99ddcfcda913.html">
-                                    <span class="tag-badge badge" style="background-color:#fe6c2d; margin:1em;padding:4px;">
-                                        <i class="bi bi-tag-fill"></i> Opencart&nbsp;&nbsp;&nbsp;8
+                                    <span class="tag-badge badge" style="background-color:#b0cf73; margin:1em;padding:4px;">
+                                        <i class="bi bi-tag-fill"></i> Opencart&nbsp;&nbsp;&nbsp;1
                                     </span>
                                     </a>
                             </div>
@@ -704,8 +691,8 @@ Then debe ver el mensaje de confirmacion "Your order has been placed!"
                                 <h5 class="card-title">Context</h5>
                             <div>
                                     <a href="46b54d9084ba9783130da16408afb27a4e4620f6bd966e731510c7395b9ddf5c.html">
-                                    <span class="tag-badge badge" style="background-color:#fe6c2d; margin:1em;padding:4px;">
-                                        <i class="bi bi-tag-fill"></i> Chrome, Linux&nbsp;&nbsp;&nbsp;8
+                                    <span class="tag-badge badge" style="background-color:#b0cf73; margin:1em;padding:4px;">
+                                        <i class="bi bi-tag-fill"></i> Chrome, Linux&nbsp;&nbsp;&nbsp;1
                                     </span>
                                     </a>
                             </div>
@@ -759,7 +746,7 @@ Then debe ver el mensaje de confirmacion "Your order has been placed!"
             datasets: [{
                 label: 'Test Results',
                 fill: false,
-                data: [0,0,0,7,0,0,1,0],
+                data: [1,0,0,0,0,0,0,0],
                 backgroundColor: ['rgba(153,204,51,0.5)','rgba(165, 199, 238, 0.5)','rgba(168, 168, 168, 0.5)','rgba(238, 224, 152, 0.75)','rgba(255, 153, 102, 0.5)','rgba(255, 22, 49, 0.5)','rgba(255, 97, 8, 0.5)','rgba(255, 104, 255, 0.5)','rgba(83, 50, 168, 0.5)'],
                 borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)','rgba(83, 50, 168, 1)'],
                 borderWidth: 1,
@@ -810,7 +797,7 @@ Then debe ver el mensaje de confirmacion "Your order has been placed!"
                         ctx.font = fontSize + "em sans-serif";
                         ctx.textBaseline = "middle";
 
-                        var text = " "
+                        var text = "100%"
                         textX = 10 + Math.round((width - ctx.measureText(text).width) / 2);
                         textY = (height / 2) - 40;
 
@@ -855,7 +842,7 @@ Then debe ver el mensaje de confirmacion "Your order has been placed!"
             datasets: [
                 {
                     label: 'Automated',
-                    data: [0,0,0,7,0,0,1,0],
+                    data: [1,0,0,0,0,0,0,0],
                     backgroundColor: ['rgba(153,204,51,0.5)','rgba(165, 199, 238, 0.5)','rgba(168, 168, 168, 0.5)','rgba(238, 224, 152, 0.75)','rgba(255, 153, 102, 0.5)','rgba(255, 22, 49, 0.5)','rgba(255, 97, 8, 0.5)','rgba(255, 104, 255, 0.5)','rgba(83, 50, 168, 0.5)'],
                     borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)','rgba(83, 50, 168, 1)'],
                     borderWidth: 1
@@ -938,7 +925,7 @@ Then debe ver el mensaje de confirmacion "Your order has been placed!"
             datasets: [{
                 label: 'Number of tests per duration',
                 fill: false,
-                data: ['7','0','1','0','0','0','0','0'],
+                data: ['0','0','1','0','0','0','0','0'],
                 backgroundColor: 'rgba(83, 146, 255,0.5)',
                 borderColor: 'rgba(83, 146, 255, 1)',
             }]
@@ -1002,7 +989,7 @@ Then debe ver el mensaje de confirmacion "Your order has been placed!"
         const coverageReports = [
             {
                 title: 'Flujo de compra completo como invitado en OpenCart',
-                result: 'ERROR',
+                result: 'SUCCESS',
                 link: "8e69fc2410e054cc44a8f9fac5d41b0c8058f751a0bb4b27da9334a09d178553.html"
             },
         ]
@@ -1013,7 +1000,7 @@ Then debe ver el mensaje de confirmacion "Your order has been placed!"
             datasets: [
                 {
                     label: ['Passing Tests'],
-                    data: [0],
+                    data: [1],
                     backgroundColor: [ 'rgba(153,204,51,0.5)' ]
                 },
                 {
@@ -1028,7 +1015,7 @@ Then debe ver el mensaje de confirmacion "Your order has been placed!"
                 },
                 {
                     label: ['Skipped Tests'],
-                    data: [7],
+                    data: [0],
                     backgroundColor: [ 'rgba(238, 224, 152, 0.75)' ]
                 },
                 {
@@ -1043,7 +1030,7 @@ Then debe ver el mensaje de confirmacion "Your order has been placed!"
                 },
                 {
                     label: ['Errors'],
-                    data: [1],
+                    data: [0],
                     backgroundColor: [ 'rgba(255, 97, 8, 0.5)' ]
                 },
                 {

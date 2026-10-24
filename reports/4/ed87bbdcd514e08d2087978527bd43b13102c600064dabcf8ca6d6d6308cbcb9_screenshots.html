@@ -152,7 +152,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 24-10-2026 19:10</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 24-10-2026 19:18</span>
     <br style="clear:left"/>
 </div>
 
@@ -200,13 +200,6 @@
                             </p>
                             <p class="tag">
                                 <span class="badge tag-badge" style="background:default;"
-                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="2a5b6a7be0f08df02d8ab0b4d4c68648c2695c6c7ef0658c71de4d42b1415b18.html">Under 1 Second
-                                        (Duration)
-                                </a>
-                                </span>
-                            </p>
-                            <p class="tag">
-                                <span class="badge tag-badge" style="background:default;"
                                     <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="65a2df077748f74ccd607af4e962738958bdf672b0d6b0150ae42bcfa475044e.html">Smoke
                                 </a>
                                 </span>
@@ -225,9 +218,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon fa-2x' title='ERROR'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
                             <span class="test-case-title">
-                                <span class="error-color">Comprar dos productos como invitado hasta la confirmacion del pedido
+                                <span class="success-color">Comprar dos productos como invitado hasta la confirmacion del pedido
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -248,49 +241,6 @@
 
     <div id="beforetable"></div>
     <div id="contenttilttle">
-            <div class="screenshotFailure panel panel-danger">
-    <div style="display:block">
-        <div class="table">
-            <div class="row">
-                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
-                    <span class="error-message error-message-title">Timeout exception: Expected condition failed: waiting for presence of element located by: By.xpath: //div[contains(@class,'alert-success')][contains(.,'iPhone')] (tried for 15 second(s) with 500 milliseconds interval)</span>
-                </div>
-                <div class="col-sm-2">
-                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall"
-                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
-                </div>
-             </div>
-        </div>
-    <div>
-
-    <!-- Details Section -->
-    <div class="row stacktrace-details">
-      <div class="col">
-        <div class="collapse multi-collapse" id="stacktraceModal-overall">
-            <div class="card">
-                <div class="card-header">
-                    <h4>org.openqa.selenium.TimeoutException </h4>
-                </div>
-                <div class="card-body">
-                    <div>
-                        <pre>opencart.tasks.EsperarProductoAgregado.performAs(EsperarProductoAgregado.java:30)<br />opencart.stepdefinitions.CompraSteps.agregaAlCarritoElProducto(CompraSteps.java:37)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)<br /></pre>
-                    </div>
-
-                    <h4>
-                        Caused by: org.openqa.selenium.NoSuchElementException
-                    </h4>
-                    <div>
-                            <pre>no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[contains(@class,'alert-success')][contains(.,'iPhone')]&quot;}<br>  (Session info: chrome=155.0.8059.39)<br>For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception<br>Build info: version: '4.23.1', revision: '656257d8e9'<br>System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.17.0-1022-azure', java.version: '17.0.20.1'<br>Driver info: org.openqa.selenium.chrome.ChromeDriver<br>Command: [79b482e1efd9a76e3f1549aa3b21f388, findElement {value=//div[contains(@class,'alert-success')][contains(.,'iPhone')], using=xpath}]<br>Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 155.0.8059.39, chrome: {chromedriverVersion: 155.0.8059.39 (3ff7ac5a9224..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:45111}, goog:processID: 2556, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:45111/devtoo..., se:cdpVersion: 155.0.8059.39, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}<br>Session ID: 79b482e1efd9a76e3f1549aa3b21f388</pre>
-                        <pre>opencart.tasks.EsperarProductoAgregado.performAs(EsperarProductoAgregado.java :30)<br />opencart.stepdefinitions.CompraSteps.agregaAlCarritoElProducto(CompraSteps.java :37)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java :69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java :74)<br /></pre>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-                    <div class="panel-body">
-                        <a href="pagesource3334913328994034683.html" target="_blank" class="btn btn-info">HTML Source</a>
-                    </div>
-            </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
                 <img src="5316f1b0721371794ddfeeaa14ca32af4d48f3444130d0c59c19021bb3538dea.png" title=" 1: Comprar dos productos como invitado hasta la confirmacion del pedido ({producto_1=MacBook, producto_2=iPhone})" width="0"/>
@@ -302,13 +252,65 @@
                 <img src="cca0b0ee526b5da96c23cedaef91a652fa0cb86ef7fb91a341273a81f3453764.png" title=" When agrega al carrito el producto &quot;MacBook&quot;" width="0"/>
                 <img src="cca0b0ee526b5da96c23cedaef91a652fa0cb86ef7fb91a341273a81f3453764.png" title=" Agrega el producto MacBook al carrito" width="0"/>
                 <img src="cca0b0ee526b5da96c23cedaef91a652fa0cb86ef7fb91a341273a81f3453764.png" title=" Cliente clicks on boton Add to Cart de MacBook" width="0"/>
-                <img src="b3d7c73db6d9babef78a83a5ef4b46a4a82fb4fe22ff997b7c017b89fa3c59f9.png" title=" Agrega el producto MacBook al carrito (completed)" width="0"/>
-                <img src="b3d7c73db6d9babef78a83a5ef4b46a4a82fb4fe22ff997b7c017b89fa3c59f9.png" title=" When agrega al carrito el producto &quot;MacBook&quot; (completed)" width="0"/>
-                <img src="6f270135a5033ef6633cda963f898d7510d406fbc8bf6bb56a9ce9a655968846.png" title=" And agrega al carrito el producto &quot;iPhone&quot;" width="0"/>
-                <img src="6f270135a5033ef6633cda963f898d7510d406fbc8bf6bb56a9ce9a655968846.png" title=" Agrega el producto iPhone al carrito" width="0"/>
-                <img src="6f270135a5033ef6633cda963f898d7510d406fbc8bf6bb56a9ce9a655968846.png" title=" Cliente clicks on boton Add to Cart de iPhone" width="0"/>
+                <img src="81bfb8afdc0b504481ee76db3315b0a262169f51d3aef7539f9cf6171395576c.png" title=" Agrega el producto MacBook al carrito (completed)" width="0"/>
+                <img src="81bfb8afdc0b504481ee76db3315b0a262169f51d3aef7539f9cf6171395576c.png" title=" When agrega al carrito el producto &quot;MacBook&quot; (completed)" width="0"/>
+                <img src="6fcb724c3ddc2a8604b18267b0e62fcfb3a4728f29d846d536dee5757ba86381.png" title=" And agrega al carrito el producto &quot;iPhone&quot;" width="0"/>
+                <img src="6fcb724c3ddc2a8604b18267b0e62fcfb3a4728f29d846d536dee5757ba86381.png" title=" Agrega el producto iPhone al carrito" width="0"/>
+                <img src="6fcb724c3ddc2a8604b18267b0e62fcfb3a4728f29d846d536dee5757ba86381.png" title=" Cliente clicks on boton Add to Cart de iPhone" width="0"/>
+                <img src="785e6fa0d031e16392f960067d3c594f71a5e376d2cda840fd3a862dd3bb2d32.png" title=" Agrega el producto iPhone al carrito (completed)" width="0"/>
+                <img src="785e6fa0d031e16392f960067d3c594f71a5e376d2cda840fd3a862dd3bb2d32.png" title=" And agrega al carrito el producto &quot;iPhone&quot; (completed)" width="0"/>
+                <img src="182fe834d1f496da2b4af05f9162e63dd6a2b7d23daec3f52b0de9332acd97f3.png" title=" And visualiza el carrito de compras" width="0"/>
+                <img src="182fe834d1f496da2b4af05f9162e63dd6a2b7d23daec3f52b0de9332acd97f3.png" title=" Visualiza el carrito de compras" width="0"/>
+                <img src="182fe834d1f496da2b4af05f9162e63dd6a2b7d23daec3f52b0de9332acd97f3.png" title=" Cliente clicks on boton del carrito en la cabecera" width="0"/>
+                <img src="f28b6ecd08d4aa1004591c26bbc8213b1fdbf91e3d31c544ae0d2296720da7d5.png" title=" Cliente clicks on opcion View Cart del menu del carrito" width="0"/>
+                <img src="f28b6ecd08d4aa1004591c26bbc8213b1fdbf91e3d31c544ae0d2296720da7d5.png" title=" Visualiza el carrito de compras (completed)" width="0"/>
+                <img src="f28b6ecd08d4aa1004591c26bbc8213b1fdbf91e3d31c544ae0d2296720da7d5.png" title=" And visualiza el carrito de compras (completed)" width="0"/>
+                <img src="126a14c70530c45dc7e5e0d25f386ed0425a76a3859115b2294badbb4f6c87c8.png" title=" And inicia el checkout como invitado" width="0"/>
+                <img src="126a14c70530c45dc7e5e0d25f386ed0425a76a3859115b2294badbb4f6c87c8.png" title=" Inicia el checkout como invitado (Guest Checkout)" width="0"/>
+                <img src="126a14c70530c45dc7e5e0d25f386ed0425a76a3859115b2294badbb4f6c87c8.png" title=" Cliente clicks on boton Checkout del carrito" width="0"/>
+                <img src="888ac77c809f8edd5f716a15612eb14fde176734775b3da66465c92d21f7153e.png" title=" Cliente clicks on opcion Guest Checkout" width="0"/>
+                <img src="b0aca79b14934503d8ec639fc739dd929e95178be3ec7086c3261bc9b35e1358.png" title=" Cliente clicks on boton Continue de Checkout Options" width="0"/>
+                <img src="b0aca79b14934503d8ec639fc739dd929e95178be3ec7086c3261bc9b35e1358.png" title=" Inicia el checkout como invitado (Guest Checkout) (completed)" width="0"/>
+                <img src="b0aca79b14934503d8ec639fc739dd929e95178be3ec7086c3261bc9b35e1358.png" title=" And inicia el checkout como invitado (completed)" width="0"/>
+                <img src="d67b11e8abef02a5221bbe434cfe2878c7df66613ad78f144012c9024f2cefe2.png" title=" And completa los datos de facturacion con:
+| nombre | apellido | correo | telefono | direccion | ciudad | codigo_postal | pais | region |
+| Jeison | Monterrosa | prueba.guest@example.com | 3001234567 | 123 Calle Prueba | Cartagena | 130001 | Colombia | Bolivar |" width="0"/>
+                <img src="d67b11e8abef02a5221bbe434cfe2878c7df66613ad78f144012c9024f2cefe2.png" title=" Completa los datos de facturacion como invitado" width="0"/>
+                <img src="d67b11e8abef02a5221bbe434cfe2878c7df66613ad78f144012c9024f2cefe2.png" title=" Cliente enters 'Jeison' into campo First Name" width="0"/>
+                <img src="e1fc9260acc5b331c2b0ba434f23382df806ee46070f1f1ad2d24b434011d5a8.png" title=" Cliente enters 'Monterrosa' into campo Last Name" width="0"/>
+                <img src="32dbe9737c11e44b41299582bf473efd5cdc97331ca08be4c7e2c7c37ae6dbd5.png" title=" Cliente enters 'prueba.guest@example.com' into campo E-Mail" width="0"/>
+                <img src="0f3e93748458a03dabdf9aeddfaa54e0059e19b1cc21f3a13c67f41359bfae30.png" title=" Cliente enters '3001234567' into campo Telephone" width="0"/>
+                <img src="11fd5d191e1b96e4b7a57bfb9f577522912cb0f12e733bd43f441643ad9e2787.png" title=" Cliente enters '123 Calle Prueba' into campo Address 1" width="0"/>
+                <img src="2a48a1916d2dec2d39a7bb912efdeadd9139eb04193d02427c6cbfa3485d0832.png" title=" Cliente enters 'Cartagena' into campo City" width="0"/>
+                <img src="df1429357af5f9151073d972bbdcc14bade280a289cad7294a92db229c7e74e9.png" title=" Cliente enters '130001' into campo Post Code" width="0"/>
+                <img src="811290be5336e81662b77c63b7dabac2ee732992ac844f0ad740f0c2d185f69e.png" title=" Cliente selects Colombia on lista Country" width="0"/>
+                <img src="452ce751626f2699bb27c9b2946187f56cb4cc28a2a7c99d7c246aa3a97acab7.png" title=" Cliente selects Bolivar on lista Region / State" width="0"/>
+                <img src="36c4df2b9f0fe5292630d425e6d2c82d353be21ce2f5fe435f960054bbe9a1b3.png" title=" Cliente clicks on boton Continue de Billing Details" width="0"/>
+                <img src="36c4df2b9f0fe5292630d425e6d2c82d353be21ce2f5fe435f960054bbe9a1b3.png" title=" Completa los datos de facturacion como invitado (completed)" width="0"/>
+                <img src="36c4df2b9f0fe5292630d425e6d2c82d353be21ce2f5fe435f960054bbe9a1b3.png" title=" And completa los datos de facturacion con:
+| nombre | apellido | correo | telefono | direccion | ciudad | codigo_postal | pais | region |
+| Jeison | Monterrosa | prueba.guest@example.com | 3001234567 | 123 Calle Prueba | Cartagena | 130001 | Colombia | Bolivar | (completed)" width="0"/>
+                <img src="5faf62bda3714879372e4ca8f17fbae35a40b7d539bf089355536335842fa3bf.png" title=" And continua con el metodo de envio por defecto" width="0"/>
+                <img src="5faf62bda3714879372e4ca8f17fbae35a40b7d539bf089355536335842fa3bf.png" title=" Continua con el metodo de envio por defecto" width="0"/>
+                <img src="5faf62bda3714879372e4ca8f17fbae35a40b7d539bf089355536335842fa3bf.png" title=" Cliente clicks on boton Continue de Delivery Method" width="0"/>
+                <img src="5faf62bda3714879372e4ca8f17fbae35a40b7d539bf089355536335842fa3bf.png" title=" Continua con el metodo de envio por defecto (completed)" width="0"/>
+                <img src="5faf62bda3714879372e4ca8f17fbae35a40b7d539bf089355536335842fa3bf.png" title=" And continua con el metodo de envio por defecto (completed)" width="0"/>
+                <img src="d3e3e296eba31d4a3301861a6fcbbac9bbe2a1ebd02d923836d4daad335c86a3.png" title=" And acepta los terminos y condiciones y continua con el metodo de pago" width="0"/>
+                <img src="d3e3e296eba31d4a3301861a6fcbbac9bbe2a1ebd02d923836d4daad335c86a3.png" title=" Acepta los terminos y condiciones y continua con el metodo de pago" width="0"/>
+                <img src="d3e3e296eba31d4a3301861a6fcbbac9bbe2a1ebd02d923836d4daad335c86a3.png" title=" Cliente clicks on casilla de terminos y condiciones" width="0"/>
+                <img src="ff52ae059b06c0d86d49a743f0afdff80846613d05fae9a0574398313d538378.png" title=" Cliente clicks on boton Continue de Payment Method" width="0"/>
+                <img src="ff52ae059b06c0d86d49a743f0afdff80846613d05fae9a0574398313d538378.png" title=" Acepta los terminos y condiciones y continua con el metodo de pago (completed)" width="0"/>
+                <img src="ff52ae059b06c0d86d49a743f0afdff80846613d05fae9a0574398313d538378.png" title=" And acepta los terminos y condiciones y continua con el metodo de pago (completed)" width="0"/>
+                <img src="46227f58df8cc75dfc83c509c65f1c6f0c1aa333a4b96f31df095f6770cca264.png" title=" And confirma el pedido" width="0"/>
+                <img src="46227f58df8cc75dfc83c509c65f1c6f0c1aa333a4b96f31df095f6770cca264.png" title=" Confirma el pedido" width="0"/>
+                <img src="46227f58df8cc75dfc83c509c65f1c6f0c1aa333a4b96f31df095f6770cca264.png" title=" Cliente clicks on boton Confirm Order" width="0"/>
+                <img src="46227f58df8cc75dfc83c509c65f1c6f0c1aa333a4b96f31df095f6770cca264.png" title=" Confirma el pedido (completed)" width="0"/>
+                <img src="46227f58df8cc75dfc83c509c65f1c6f0c1aa333a4b96f31df095f6770cca264.png" title=" And confirma el pedido (completed)" width="0"/>
+                <img src="469f296933f6eafd7483f1783b1b25dac1e3cefa4f517c233a3c9ccc6fa5f7a7.png" title=" Then debe ver el mensaje de confirmacion &quot;Your order has been placed!&quot;" width="0"/>
+                <img src="469f296933f6eafd7483f1783b1b25dac1e3cefa4f517c233a3c9ccc6fa5f7a7.png" title=" Then el mensaje de confirmacion del pedido should be 'Your order has been placed!'" width="0"/>
+                <img src="469f296933f6eafd7483f1783b1b25dac1e3cefa4f517c233a3c9ccc6fa5f7a7.png" title=" Then debe ver el mensaje de confirmacion &quot;Your order has been placed!&quot; (completed)" width="0"/>
 
-                <img src="ba11c225f316e55e43d1eab00c7c66e3da69a135be03f32d5df90c152220b509.png" title=" Agrega el producto iPhone al carrito (completed): <span class='error-color'>ERROR</span>" width="0"/>
+                <img src="469f296933f6eafd7483f1783b1b25dac1e3cefa4f517c233a3c9ccc6fa5f7a7.png" title=" 1: Comprar dos productos como invitado hasta la confirmacion del pedido ({producto_1=MacBook, producto_2=iPhone}) (completed): <span class='success-color'>SUCCESS</span>" width="0"/>
             </div>
         </div>
 
