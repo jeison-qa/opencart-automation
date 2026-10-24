@@ -42,6 +42,7 @@ public class CheckoutPage {
                     .located(By.cssSelector("input[name='agree']"));
     public static final Target BOTON_CONTINUAR_PAGO =
             Target.the("boton Continue de Payment Method").located(By.id("button-payment-method"));
+
     // Paso 6: Confirm Order
     public static final Target BOTON_CONFIRMAR_PEDIDO =
             Target.the("boton Confirm Order").located(By.id("button-confirm"));

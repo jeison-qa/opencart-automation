@@ -3,13 +3,20 @@ package opencart.tasks;
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
+import net.serenitybdd.screenplay.waits.WaitUntil;
 import opencart.ui.CheckoutPage;
+
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class FinalizarCompra {
 
     public static Performable continuandoConElEnvioPorDefecto() {
         return Task.where("Continua con el metodo de envio por defecto",
-                Click.on(CheckoutPage.BOTON_CONTINUAR_ENVIO));
+
+                WaitUntil.the(CheckoutPage.BOTON_CONTINUAR_ENVIO,isVisible()).forNoMoreThan(10).seconds(),
+
+                Click.on(CheckoutPage.BOTON_CONTINUAR_ENVIO)
+        );
     }
 
     public static Performable aceptandoTerminosYContinuandoConElPago() {
