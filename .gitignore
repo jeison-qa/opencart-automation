@@ -1,0 +1,11 @@
+.gradle/
+build/
+.idea/
+*.iml
+.vscode/
+out/
+*.log
+# Datos sensibles
+.env
+# Reporte regenerable (la carpeta evidencias/ si se sube al repositorio)
+target/

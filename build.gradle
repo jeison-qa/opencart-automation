@@ -1,0 +1,75 @@
+plugins {
+    id 'java'
+    id 'net.serenity-bdd.serenity-gradle-plugin' version '4.2.1'
+}
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    serenityVersion = '4.2.1'
+    cucumberVersion = '7.18.0'
+    junitVersion    = '5.10.2'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+dependencies {
+    // Serenity + Screenplay
+    testImplementation "net.serenity-bdd:serenity-core:${serenityVersion}"
+    testImplementation "net.serenity-bdd:serenity-cucumber:${serenityVersion}"
+    testImplementation "net.serenity-bdd:serenity-screenplay:${serenityVersion}"
+    testImplementation "net.serenity-bdd:serenity-screenplay-webdriver:${serenityVersion}"
+    testImplementation "net.serenity-bdd:serenity-ensure:${serenityVersion}"
+
+    // Cucumber sobre JUnit 5
+    testImplementation "io.cucumber:cucumber-java:${cucumberVersion}"
+    testImplementation "io.cucumber:cucumber-junit-platform-engine:${cucumberVersion}"
+
+    testImplementation platform("org.junit:junit-bom:${junitVersion}")
+    testImplementation 'org.junit.platform:junit-platform-suite'
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+
+    testImplementation 'org.assertj:assertj-core:3.25.3'
+    // El SerenityReporter usa clases de JUnit 4 internamente
+    testImplementation 'junit:junit:4.13.2'
+    // Logging (usa src/test/resources/logback-test.xml)
+    testImplementation 'ch.qos.logback:logback-classic:1.4.14'
+}
+
+test {
+    useJUnitPlatform()
+
+    // Reenvia solo las propiedades utiles, por ejemplo: gradle clean test -Dheadless.mode=true
+
+    ['headless.mode', 'webdriver.driver', 'opencart.base.url',
+     'cucumber.filter.tags', 'webdriver.wait.for.timeout'].each { p ->
+        if (System.getProperty(p)) {
+            systemProperty p, System.getProperty(p)
+        }
+    }
+
+    testLogging {
+        showStandardStreams = true
+        exceptionFormat = 'full'
+    }
+
+    // Genera el reporte HTML de Serenity siempre, aunque falle una prueba
+    finalizedBy aggregate
+}
+
+serenity {
+    reports = ["single-page-html"]
+}
+
+gradle.startParameter.continueOnFailure = true
