@@ -1,4 +1,4 @@
-name: Serenity Tests with GitHub Pages
+name: opencart-automation_with GitHub Pages
 
 on:
   push:
