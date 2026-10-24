@@ -152,7 +152,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 24-10-2026 19:22</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 24-10-2026 19:42</span>
     <br style="clear:left"/>
 </div>
 
@@ -193,7 +193,7 @@
                             </p>
                             <p class="tag">
                                 <span class="badge tag-badge" style="background:default;"
-                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="34658a1663fcf042bd7acb3325affbe4e647c8acd84d0228be2f52e1381e61b9.html">10 To 30 Seconds
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="2a5b6a7be0f08df02d8ab0b4d4c68648c2695c6c7ef0658c71de4d42b1415b18.html">Under 1 Second
                                         (Duration)
                                 </a>
                                 </span>
@@ -218,9 +218,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon fa-2x' title='FAILURE'></i></a></span>
                             <span class="test-case-title">
-                                <span class="success-color">Comprar dos productos como invitado hasta la confirmacion del pedido
+                                <span class="failing-color">Comprar dos productos como invitado hasta la confirmacion del pedido
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -241,6 +241,49 @@
 
     <div id="beforetable"></div>
     <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Element should be present exception: Expected condition failed: waiting for By.id: button-confirm to be present (tried for 5 second(s) with 100 milliseconds interval)Build info: version: '4.23.1', revision: '656257d8e9'System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.17.0-1022-azure', java.version: '17.0.20.1'Driver info: driver.version: unknown</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall"
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>net.thucydides.core.webdriver.exceptions.ElementShouldBePresentException </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>opencart.stepdefinitions.CompraSteps.confirmaElPedido(CompraSteps.java:66)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)<br /></pre>
+                    </div>
+
+                    <h4>
+                        Caused by: org.openqa.selenium.TimeoutException
+                    </h4>
+                    <div>
+                            <pre>Expected condition failed: waiting for By.id: button-confirm to be present (tried for 5 second(s) with 100 milliseconds interval)<br>Build info: version: '4.23.1', revision: '656257d8e9'<br>System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.17.0-1022-azure', java.version: '17.0.20.1'<br>Driver info: driver.version: unknown</pre>
+                        <pre>opencart.stepdefinitions.CompraSteps.confirmaElPedido(CompraSteps.java :66)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java :69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java :74)<br /></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                    <div class="panel-body">
+                        <a href="pagesource10194017763923969585.html" target="_blank" class="btn btn-info">HTML Source</a>
+                    </div>
+            </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
                 <img src="5316f1b0721371794ddfeeaa14ca32af4d48f3444130d0c59c19021bb3538dea.png" title=" 1: Comprar dos productos como invitado hasta la confirmacion del pedido ({producto_1=MacBook, producto_2=iPhone})" width="0"/>
@@ -252,23 +295,23 @@
                 <img src="cca0b0ee526b5da96c23cedaef91a652fa0cb86ef7fb91a341273a81f3453764.png" title=" When agrega al carrito el producto &quot;MacBook&quot;" width="0"/>
                 <img src="cca0b0ee526b5da96c23cedaef91a652fa0cb86ef7fb91a341273a81f3453764.png" title=" Agrega el producto MacBook al carrito" width="0"/>
                 <img src="cca0b0ee526b5da96c23cedaef91a652fa0cb86ef7fb91a341273a81f3453764.png" title=" Cliente clicks on boton Add to Cart de MacBook" width="0"/>
-                <img src="1ca3f1eb0f12842faa17d73bec0585b033e3a994c8a3629f933dfd334264499a.png" title=" Agrega el producto MacBook al carrito (completed)" width="0"/>
-                <img src="1ca3f1eb0f12842faa17d73bec0585b033e3a994c8a3629f933dfd334264499a.png" title=" When agrega al carrito el producto &quot;MacBook&quot; (completed)" width="0"/>
-                <img src="82aee8eb8b7cd9a433eca4addb750d3135c9577cb334bada7f633ff8a7c3c3d2.png" title=" And agrega al carrito el producto &quot;iPhone&quot;" width="0"/>
-                <img src="82aee8eb8b7cd9a433eca4addb750d3135c9577cb334bada7f633ff8a7c3c3d2.png" title=" Agrega el producto iPhone al carrito" width="0"/>
-                <img src="82aee8eb8b7cd9a433eca4addb750d3135c9577cb334bada7f633ff8a7c3c3d2.png" title=" Cliente clicks on boton Add to Cart de iPhone" width="0"/>
-                <img src="a331ee0858d40b90b2b71193658ea8b0761112a26aef6a9ca83f5fb97513fdd8.png" title=" Agrega el producto iPhone al carrito (completed)" width="0"/>
-                <img src="a331ee0858d40b90b2b71193658ea8b0761112a26aef6a9ca83f5fb97513fdd8.png" title=" And agrega al carrito el producto &quot;iPhone&quot; (completed)" width="0"/>
-                <img src="d85232f939aa255cf2840180e05e7ea689689a3799e508381000f4bf8b150340.png" title=" And visualiza el carrito de compras" width="0"/>
-                <img src="d85232f939aa255cf2840180e05e7ea689689a3799e508381000f4bf8b150340.png" title=" Visualiza el carrito de compras" width="0"/>
-                <img src="d85232f939aa255cf2840180e05e7ea689689a3799e508381000f4bf8b150340.png" title=" Cliente clicks on boton del carrito en la cabecera" width="0"/>
+                <img src="b3d7c73db6d9babef78a83a5ef4b46a4a82fb4fe22ff997b7c017b89fa3c59f9.png" title=" Agrega el producto MacBook al carrito (completed)" width="0"/>
+                <img src="b3d7c73db6d9babef78a83a5ef4b46a4a82fb4fe22ff997b7c017b89fa3c59f9.png" title=" When agrega al carrito el producto &quot;MacBook&quot; (completed)" width="0"/>
+                <img src="d1a5b59c1998bc1799b29ff1b9bc9528c408a640b0ecdd91f08b551861ab346f.png" title=" And agrega al carrito el producto &quot;iPhone&quot;" width="0"/>
+                <img src="d1a5b59c1998bc1799b29ff1b9bc9528c408a640b0ecdd91f08b551861ab346f.png" title=" Agrega el producto iPhone al carrito" width="0"/>
+                <img src="d1a5b59c1998bc1799b29ff1b9bc9528c408a640b0ecdd91f08b551861ab346f.png" title=" Cliente clicks on boton Add to Cart de iPhone" width="0"/>
+                <img src="785e6fa0d031e16392f960067d3c594f71a5e376d2cda840fd3a862dd3bb2d32.png" title=" Agrega el producto iPhone al carrito (completed)" width="0"/>
+                <img src="785e6fa0d031e16392f960067d3c594f71a5e376d2cda840fd3a862dd3bb2d32.png" title=" And agrega al carrito el producto &quot;iPhone&quot; (completed)" width="0"/>
+                <img src="182fe834d1f496da2b4af05f9162e63dd6a2b7d23daec3f52b0de9332acd97f3.png" title=" And visualiza el carrito de compras" width="0"/>
+                <img src="182fe834d1f496da2b4af05f9162e63dd6a2b7d23daec3f52b0de9332acd97f3.png" title=" Visualiza el carrito de compras" width="0"/>
+                <img src="182fe834d1f496da2b4af05f9162e63dd6a2b7d23daec3f52b0de9332acd97f3.png" title=" Cliente clicks on boton del carrito en la cabecera" width="0"/>
                 <img src="f28b6ecd08d4aa1004591c26bbc8213b1fdbf91e3d31c544ae0d2296720da7d5.png" title=" Cliente clicks on opcion View Cart del menu del carrito" width="0"/>
                 <img src="f28b6ecd08d4aa1004591c26bbc8213b1fdbf91e3d31c544ae0d2296720da7d5.png" title=" Visualiza el carrito de compras (completed)" width="0"/>
                 <img src="f28b6ecd08d4aa1004591c26bbc8213b1fdbf91e3d31c544ae0d2296720da7d5.png" title=" And visualiza el carrito de compras (completed)" width="0"/>
                 <img src="126a14c70530c45dc7e5e0d25f386ed0425a76a3859115b2294badbb4f6c87c8.png" title=" And inicia el checkout como invitado" width="0"/>
                 <img src="126a14c70530c45dc7e5e0d25f386ed0425a76a3859115b2294badbb4f6c87c8.png" title=" Inicia el checkout como invitado (Guest Checkout)" width="0"/>
                 <img src="126a14c70530c45dc7e5e0d25f386ed0425a76a3859115b2294badbb4f6c87c8.png" title=" Cliente clicks on boton Checkout del carrito" width="0"/>
-                <img src="bfbd774697d83820d84173f25eeb4b5d42ddabeb91bb136b9b216ac18032cc51.png" title=" Cliente clicks on opcion Guest Checkout" width="0"/>
+                <img src="c7f11e9a8ceaa2e65b12f098555bbbcc70390e0ffa155e63bbb542b3a83b1632.png" title=" Cliente clicks on opcion Guest Checkout" width="0"/>
                 <img src="b0aca79b14934503d8ec639fc739dd929e95178be3ec7086c3261bc9b35e1358.png" title=" Cliente clicks on boton Continue de Checkout Options" width="0"/>
                 <img src="b0aca79b14934503d8ec639fc739dd929e95178be3ec7086c3261bc9b35e1358.png" title=" Inicia el checkout como invitado (Guest Checkout) (completed)" width="0"/>
                 <img src="b0aca79b14934503d8ec639fc739dd929e95178be3ec7086c3261bc9b35e1358.png" title=" And inicia el checkout como invitado (completed)" width="0"/>
@@ -277,40 +320,34 @@
 | Jeison | Monterrosa | prueba.guest@example.com | 3001234567 | 123 Calle Prueba | Cartagena | 130001 | Colombia | Bolivar |" width="0"/>
                 <img src="24d47e92b488f63425f1408aed324288b6cdb478ae5a5d4b5da253fb769d1492.png" title=" Completa los datos de facturacion como invitado" width="0"/>
                 <img src="24d47e92b488f63425f1408aed324288b6cdb478ae5a5d4b5da253fb769d1492.png" title=" Cliente enters 'Jeison' into campo First Name" width="0"/>
-                <img src="e1fc9260acc5b331c2b0ba434f23382df806ee46070f1f1ad2d24b434011d5a8.png" title=" Cliente enters 'Monterrosa' into campo Last Name" width="0"/>
-                <img src="53f31a07369be58674617c6b83c071afa1ddd3e5e433afed8f48b47d66af6107.png" title=" Cliente enters 'prueba.guest@example.com' into campo E-Mail" width="0"/>
-                <img src="b2ee03c029fe1b085778872121067c478b4ae11fd8a7057aacb75c2e1cb47dad.png" title=" Cliente enters '3001234567' into campo Telephone" width="0"/>
-                <img src="9b5bc83d78e2d05a8e20efc58cd4f10b123a9143e857d7a82d951f2e3097f2dc.png" title=" Cliente enters '123 Calle Prueba' into campo Address 1" width="0"/>
-                <img src="9ba458055eef4d3bdbe20ea8eb52b54f506563f02b2bdc9e58e5c1b9f173e200.png" title=" Cliente enters 'Cartagena' into campo City" width="0"/>
-                <img src="1b34e0704d015f9371375d6ec1f2adb3ce0a7b109fdfb5846b6e44e37c02261e.png" title=" Cliente enters '130001' into campo Post Code" width="0"/>
-                <img src="03fa50577ea06da0341c668c97bcc00a0b9352e521f3c1081cbf7fe453806f13.png" title=" Cliente selects Colombia on lista Country" width="0"/>
-                <img src="a9ea890b9af8eab9c8ae3773b7d2923876f0c676c9ea302201f1830fdf831fbd.png" title=" Cliente selects Bolivar on lista Region / State" width="0"/>
-                <img src="813637ab844690e7e383f79a6fb6e8c899247ac8e4577b9ddc53a9d1db6a2389.png" title=" Cliente clicks on boton Continue de Billing Details" width="0"/>
-                <img src="813637ab844690e7e383f79a6fb6e8c899247ac8e4577b9ddc53a9d1db6a2389.png" title=" Completa los datos de facturacion como invitado (completed)" width="0"/>
-                <img src="813637ab844690e7e383f79a6fb6e8c899247ac8e4577b9ddc53a9d1db6a2389.png" title=" And completa los datos de facturacion con:
+                <img src="ae5c53df05637a993bce64682e4838061a397666ab3262c7a3cf66ca5efb694a.png" title=" Cliente enters 'Monterrosa' into campo Last Name" width="0"/>
+                <img src="feec09d8e0a96c074f4d0e48c67a45af5b384917e46acc6ecc66d271cf0b8495.png" title=" Cliente enters 'prueba.guest@example.com' into campo E-Mail" width="0"/>
+                <img src="8a7f5d9a29b42ad9ab6565a7591766fd1df23e99096a89cc8d6b9131c6fcb72b.png" title=" Cliente enters '3001234567' into campo Telephone" width="0"/>
+                <img src="d42a4c460b92374e4af0fc43c353ed4997af8a016e5f8d0eeaeed41d64c4784c.png" title=" Cliente enters '123 Calle Prueba' into campo Address 1" width="0"/>
+                <img src="c348ac2745c6cefee8c03fd759b8a18ab11b9674e2fe5f3b2b2eaabca6b153f8.png" title=" Cliente enters 'Cartagena' into campo City" width="0"/>
+                <img src="e942dab8da7560cc0f3fa581f8fd0b5619db1a4c16fc0191b480a3000aa54731.png" title=" Cliente enters '130001' into campo Post Code" width="0"/>
+                <img src="d46d53d114bba10e87938b11ceab6d06dab46444e7cc5b0654ce8cc9c337b2b4.png" title=" Cliente selects Colombia on lista Country" width="0"/>
+                <img src="7e7b75abf6fe6ab040636697f249a4f1a7d7f276fa04b6e81b52b27a8ad5f5e4.png" title=" Cliente selects Bolivar on lista Region / State" width="0"/>
+                <img src="5e20e9fb875cc881ecbae673b03e169e5e5c3ec898b14bad6477cc48fc0d8f68.png" title=" Cliente clicks on boton Continue de Billing Details" width="0"/>
+                <img src="5e20e9fb875cc881ecbae673b03e169e5e5c3ec898b14bad6477cc48fc0d8f68.png" title=" Completa los datos de facturacion como invitado (completed)" width="0"/>
+                <img src="5e20e9fb875cc881ecbae673b03e169e5e5c3ec898b14bad6477cc48fc0d8f68.png" title=" And completa los datos de facturacion con:
 | nombre | apellido | correo | telefono | direccion | ciudad | codigo_postal | pais | region |
 | Jeison | Monterrosa | prueba.guest@example.com | 3001234567 | 123 Calle Prueba | Cartagena | 130001 | Colombia | Bolivar | (completed)" width="0"/>
-                <img src="5faf62bda3714879372e4ca8f17fbae35a40b7d539bf089355536335842fa3bf.png" title=" And continua con el metodo de envio por defecto" width="0"/>
-                <img src="5faf62bda3714879372e4ca8f17fbae35a40b7d539bf089355536335842fa3bf.png" title=" Continua con el metodo de envio por defecto" width="0"/>
-                <img src="5faf62bda3714879372e4ca8f17fbae35a40b7d539bf089355536335842fa3bf.png" title=" Cliente clicks on boton Continue de Delivery Method" width="0"/>
-                <img src="5faf62bda3714879372e4ca8f17fbae35a40b7d539bf089355536335842fa3bf.png" title=" Continua con el metodo de envio por defecto (completed)" width="0"/>
-                <img src="5faf62bda3714879372e4ca8f17fbae35a40b7d539bf089355536335842fa3bf.png" title=" And continua con el metodo de envio por defecto (completed)" width="0"/>
-                <img src="3c2f4caec99cd2e3fe191bf74615fcda466f71094369bd98ec43f88b2aa213aa.png" title=" And acepta los terminos y condiciones y continua con el metodo de pago" width="0"/>
-                <img src="3c2f4caec99cd2e3fe191bf74615fcda466f71094369bd98ec43f88b2aa213aa.png" title=" Acepta los terminos y condiciones y continua con el metodo de pago" width="0"/>
-                <img src="3c2f4caec99cd2e3fe191bf74615fcda466f71094369bd98ec43f88b2aa213aa.png" title=" Cliente clicks on casilla de terminos y condiciones" width="0"/>
-                <img src="ff52ae059b06c0d86d49a743f0afdff80846613d05fae9a0574398313d538378.png" title=" Cliente clicks on boton Continue de Payment Method" width="0"/>
-                <img src="ff52ae059b06c0d86d49a743f0afdff80846613d05fae9a0574398313d538378.png" title=" Acepta los terminos y condiciones y continua con el metodo de pago (completed)" width="0"/>
-                <img src="ff52ae059b06c0d86d49a743f0afdff80846613d05fae9a0574398313d538378.png" title=" And acepta los terminos y condiciones y continua con el metodo de pago (completed)" width="0"/>
-                <img src="46227f58df8cc75dfc83c509c65f1c6f0c1aa333a4b96f31df095f6770cca264.png" title=" And confirma el pedido" width="0"/>
-                <img src="46227f58df8cc75dfc83c509c65f1c6f0c1aa333a4b96f31df095f6770cca264.png" title=" Confirma el pedido" width="0"/>
-                <img src="46227f58df8cc75dfc83c509c65f1c6f0c1aa333a4b96f31df095f6770cca264.png" title=" Cliente clicks on boton Confirm Order" width="0"/>
-                <img src="46227f58df8cc75dfc83c509c65f1c6f0c1aa333a4b96f31df095f6770cca264.png" title=" Confirma el pedido (completed)" width="0"/>
-                <img src="46227f58df8cc75dfc83c509c65f1c6f0c1aa333a4b96f31df095f6770cca264.png" title=" And confirma el pedido (completed)" width="0"/>
-                <img src="469f296933f6eafd7483f1783b1b25dac1e3cefa4f517c233a3c9ccc6fa5f7a7.png" title=" Then debe ver el mensaje de confirmacion &quot;Your order has been placed!&quot;" width="0"/>
-                <img src="469f296933f6eafd7483f1783b1b25dac1e3cefa4f517c233a3c9ccc6fa5f7a7.png" title=" Then el mensaje de confirmacion del pedido should be 'Your order has been placed!'" width="0"/>
-                <img src="469f296933f6eafd7483f1783b1b25dac1e3cefa4f517c233a3c9ccc6fa5f7a7.png" title=" Then debe ver el mensaje de confirmacion &quot;Your order has been placed!&quot; (completed)" width="0"/>
+                <img src="730dfe056db53892abb64f75cfecc9be15726f66f06462129ef659c5d618144d.png" title=" And continua con el metodo de envio por defecto" width="0"/>
+                <img src="730dfe056db53892abb64f75cfecc9be15726f66f06462129ef659c5d618144d.png" title=" Continua con el metodo de envio por defecto" width="0"/>
+                <img src="730dfe056db53892abb64f75cfecc9be15726f66f06462129ef659c5d618144d.png" title=" Cliente clicks on boton Continue de Delivery Method" width="0"/>
+                <img src="730dfe056db53892abb64f75cfecc9be15726f66f06462129ef659c5d618144d.png" title=" Continua con el metodo de envio por defecto (completed)" width="0"/>
+                <img src="730dfe056db53892abb64f75cfecc9be15726f66f06462129ef659c5d618144d.png" title=" And continua con el metodo de envio por defecto (completed)" width="0"/>
+                <img src="b03a5e4ca0f2b677c40aafb6b8c407809646d6295359a3129d8f56ed287ad7aa.png" title=" And acepta los terminos y condiciones y continua con el metodo de pago" width="0"/>
+                <img src="b03a5e4ca0f2b677c40aafb6b8c407809646d6295359a3129d8f56ed287ad7aa.png" title=" Acepta los terminos y condiciones y continua con el metodo de pago" width="0"/>
+                <img src="b03a5e4ca0f2b677c40aafb6b8c407809646d6295359a3129d8f56ed287ad7aa.png" title=" Cliente clicks on casilla de terminos y condiciones" width="0"/>
+                <img src="e677ddee4c7aa1908c10d3b50336d972f3f0b56c0b7def4b808191a185d454d8.png" title=" Cliente clicks on boton Continue de Payment Method" width="0"/>
+                <img src="e677ddee4c7aa1908c10d3b50336d972f3f0b56c0b7def4b808191a185d454d8.png" title=" Acepta los terminos y condiciones y continua con el metodo de pago (completed)" width="0"/>
+                <img src="e677ddee4c7aa1908c10d3b50336d972f3f0b56c0b7def4b808191a185d454d8.png" title=" And acepta los terminos y condiciones y continua con el metodo de pago (completed)" width="0"/>
+                <img src="4b3816f92409b29a2e9b4d0c465a1306a41bfda7e8dd7f9e9ed1fd638ba60d83.png" title=" And confirma el pedido" width="0"/>
+                <img src="4b3816f92409b29a2e9b4d0c465a1306a41bfda7e8dd7f9e9ed1fd638ba60d83.png" title=" Confirma el pedido" width="0"/>
 
-                <img src="469f296933f6eafd7483f1783b1b25dac1e3cefa4f517c233a3c9ccc6fa5f7a7.png" title=" 1: Comprar dos productos como invitado hasta la confirmacion del pedido ({producto_1=MacBook, producto_2=iPhone}) (completed): <span class='success-color'>SUCCESS</span>" width="0"/>
+                <img src="4b3816f92409b29a2e9b4d0c465a1306a41bfda7e8dd7f9e9ed1fd638ba60d83.png" title=" Cliente clicks on boton Confirm Order: <span class='failing-color'>FAILURE</span>" width="0"/>
             </div>
         </div>
 

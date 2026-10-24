@@ -1,1 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Flujo de compra completo como invitado en OpenCart" skipped="0" tests="1" time="24.05" timestamp="2026-10-24 07:22:45"><testcase name="Comprar dos productos como invitado hasta la confirmacion del pedido"/></testsuite>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="Flujo de compra completo como invitado en OpenCart" skipped="0" tests="1" time="0.0" timestamp="2026-10-24 07:42:34"><testcase name="Comprar dos productos como invitado hasta la confirmacion del pedido"><failure message="Expected condition failed: waiting for By.id: button-confirm to be present (tried for 5 second(s) with 100 milliseconds interval)&#10;Build info: version: '4.23.1', revision: '656257d8e9'&#10;System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.17.0-1022-azure', java.version: '17.0.20.1'&#10;Driver info: driver.version: unknown" type="net.thucydides.core.webdriver.exceptions.ElementShouldBePresentException">Expected condition failed: waiting for By.id: button-confirm to be present (tried for 5 second(s) with 100 milliseconds interval)
+Build info: version: '4.23.1', revision: '656257d8e9'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.17.0-1022-azure', java.version: '17.0.20.1'
+Driver info: driver.version: unknown</failure><system-err>Expected condition failed: waiting for By.id: button-confirm to be present (tried for 5 second(s) with 100 milliseconds interval)
+Build info: version: '4.23.1', revision: '656257d8e9'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.17.0-1022-azure', java.version: '17.0.20.1'
+Driver info: driver.version: unknown
+opencart.stepdefinitions.CompraSteps.confirmaElPedido(CompraSteps.java:66)
+worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</system-err></testcase></testsuite>
