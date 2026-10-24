@@ -80,7 +80,39 @@ Los datos de la prueba (productos y datos de facturacion) estan en la tabla
   Ejemplo:
             ./gradlew clean test -Dheadless.mode=true
 
-5. ESTRUCTURA DEL PROYECTO
+
+5. EJECUCIÓN AUTOMÁTICA CON GITHUB ACTIONS Y GITHUB PAGES
+---------------------------------------------------------
+El proyecto utiliza GitHub Actions para ejecutar automáticamente las
+pruebas E2E y generar el reporte de Serenity.
+
+El flujo de trabajo se encuentra en:
+  .github/workflows/e2e.yml
+
+El proceso realiza las siguientes actividades:
+  1) Descarga el código del repositorio.
+  2) Configura Java 17 y el entorno de Gradle.
+  3) Ejecuta las pruebas automatizadas en modo headless.
+  4) Genera el reporte de Serenity.
+  5) Guarda el reporte como artefacto de la ejecución.
+  6) Publica el reporte en GitHub Pages cuando el flujo se ejecuta
+     mediante un push a la rama main.
+
+Para consultar la ejecución:
+  1) Ingresar al repositorio en GitHub.
+  2) Abrir la pestaña Actions.
+  3) Seleccionar la ejecución correspondiente.
+  4) Revisar el resultado de las pruebas y los pasos del flujo.
+
+Reporte publicado:
+  https://jeison-qa.github.io/opencart-automation/
+
+El reporte permite consultar los resultados de las pruebas automatizadas.
+Su disponibilidad depende de que GitHub Actions genere los archivos
+correctamente y de que GitHub Pages esté configurado.
+
+
+6. ESTRUCTURA DEL PROYECTO
 --------------------------
   build.gradle, settings.gradle, gradlew, gradlew.bat, gradle/   Build y wrapper
   serenity.properties                                            Opciones de Serenity

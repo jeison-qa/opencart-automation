@@ -55,3 +55,4 @@ jobs:
           publish_dir: ./target/site/serenity
           destination_dir: reports/${{ github.run_number }}
           keep_files: true
+
