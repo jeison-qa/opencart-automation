@@ -72,7 +72,7 @@ el flujo pedido en el ejercicio:
   de anadir al carrito genera la interaccion de forma intermitente, es
   decir, se queda cargando el boton y no ejecuta la accion sino despues de
   varios intentos; en el caso de los monitores, al anadir el producto este
-  no se carga al carrito. Por eso el escenario usa MacBook e iPhone.git
+  no se carga al carrito. Por eso el escenario usa MacBook e iPhone.
  
 6. MEJORAS PROPUESTAS
 ---------------------
